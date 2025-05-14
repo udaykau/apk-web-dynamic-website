@@ -1,0 +1,1125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- meta tags -->
+<meta charset="utf-8">
+<meta name="keywords" content="bootstrap 4, premium, multipurpose, sass, scss, saas" />
+<meta name="description" content="Bootstrap 4 Landing Page Template" />
+<meta name="author" content="www.themeht.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Title -->
+<title>APKShopee - Order complete</title>
+
+<!-- Favicon Icon -->
+<link rel="icon" type="image/png" href="{% static 'apkshopee/images/logo.png' %}" />
+<!-- inject css start -->
+
+<link href="{% static 'apkshopee/css/theme-plugin.css' %}" rel="stylesheet" />
+<link href="{% static 'apkshopee/css/theme.min.css' %}" rel="stylesheet" />
+
+<!-- inject css end -->
+
+</head>
+
+<body>
+
+<!-- page wrapper start -->
+
+<div class="page-wrapper">
+  
+<!-- preloader start -->
+
+<div id="ht-preloader">
+  <div class="loader clear-loader">
+    <img class="img-fluid" src="{% static 'apkshopee/images/loader.gif' %}" alt="">
+  </div>
+</div>
+
+<!-- preloader end -->
+
+
+<!--header start-->
+
+<header class="site-header">
+  <div class="header-top bg-dark py-1">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-12 d-flex align-items-center justify-content-between text-white">
+          <div class="d-none d-md-flex align-items-center"> <small class="mr-3"><i class="las la-store text-primary mr-1 align-middle"></i>Welcome to Our APK Shopee</small>  <small><i class="las la-truck text-primary mr-1 align-middle"></i> Free shipping across India</small>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="language-selection mr-2">
+              <div class="dropdown">
+                <button class="btn btn-sm text-white">English</button>
+
+              </div>
+            </div>
+            <div class="social-icons">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a class="text-muted" href="https://www.facebook.com/apkperksofficial" target="_blank"><i class="lab la-facebook-f"></i></a>
+                </li>
+                <li class="list-inline-item"><a class="text-muted" href="#"><i class="lab la-youtube"></i></a>
+                </li>
+                <li class="list-inline-item"><a class="text-muted" href="https://in.linkedin.com/company/apk-perks" target="_blank"><i class="lab la-linkedin-in"></i></a>
+                </li>
+                <li class="list-inline-item"><a class="text-muted" href="https://www.instagram.com/apkperks/" target="_blank"><i class="lab la-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-md-3 py-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 d-none d-md-flex align-items-center">
+          <a class="navbar-brand logo d-none d-lg-block" href="{% url 'index' %}">
+            <img class="img-fluid" src="{% static 'apkshopee/images/logo.png' %}" alt="">
+          </a>
+          <div class="media ml-lg-11"> <i class="las la-mobile-alt ic-2x bg-white rounded p-2 shadow-sm mr-2 text-primary"></i>
+            <div class="media-body"> <span class="mb-0 d-block">Call Us</span>
+              <a class="text-muted" href="tel:0120-4369999">0120-4369999</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="right-nav align-items-center d-flex justify-content-end">
+            <form class="form-inline border rounded w-100" method="post" action="{% url 'Search' %}">
+{% csrf_token %}
+              <select class="custom-select border-0 rounded-0 bg-light form-control d-none d-lg-inline">
+                <option selected>All Categories</option>
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="3">Kids</option>
+                <option value="1">Home Furnishing</option>
+                <option value="1">Home Decor</option>
+                <option value="1">Home Improvements</option>
+                <option value="1">Mobile Accessories</option>
+                <option value="1">Others</option>
+              </select>
+              <input class="form-control border-0 border-left col" name="name" type="search" placeholder="Enter Your Keyword" aria-label="Search">
+              <button class="btn btn-primary text-white col-auto" type="submit"><i class="las la-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!--menu end-->
+      </div>
+    </div>
+  </div>
+  <div id="header-wrap" class="shadow-sm">
+    <div class="container">
+      <div class="row">
+        <!--menu start-->
+        <div class="col">
+          <nav class="navbar navbar-expand-lg navbar-light position-static">
+            <a class="navbar-brand logo d-lg-none" href="{% url 'index' %}">
+              <img class="img-fluid" src="{% static 'apkshopee/images/logo.png' %}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Catalog</a>
+                  <div class="dropdown-menu w-100">
+                    <!-- Tabs -->
+                    <div class="container p-0">
+                      <div class="row w-100 no-gutters">
+                        <div class="col-lg-0 p-lg-3">
+                          <form>
+                            <div class="tab">
+                              <!-- Nav -->
+                              <nav class="nav nav-tabs border-0 mb-5">
+                                <a class="nav-item nav-link active" data-toggle="tab" id="#navTab1">Men</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab2">Women</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab3">Kids</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab4"></a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab5">Home Furnishing</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab6">Home Decor</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab7">Home Improvements</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab8">Mobile Accessories</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#navTab9">Others</a>
+                              </nav>
+                              </div>
+                              <div class="tab-content p-0">
+                                <div class="tab-pane fade show active" id="navTab1">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'Men' 'western_wear'  %}">western wear</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Shirts,_Tops,&_Tees'  %}">Shirts, Tops,& Tees</a></li>
+                                          <li><a href="{% url 'shop' 'Men' 'Dress'  %}">Dress</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Jeans_&_Jeggings'  %}">Jeans & Jeggings</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Ethnic_Wear'  %}">Ethnic Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Salwar_Suits'  %}">Salwar Suits</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Sarees'  %}">Sarees</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Lingerie_&_Lounge_Wear'  %}">Lingerie & Lounge Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Sportswear'  %}">Sportswear</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Socks'  %}">Socks</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Sweaters'  %}">Sweaters</a></li>
+                                        <li><a href="{% url 'shop' 'Men' 'Jacket&Coats'  %}">Jacket&Coats</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Men's Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li> <a href="{% url 'shop' 'Men' 'T-Shits'  %}">T-Shits</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Shirts'  %}">Shirts</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Trousers'  %}">Trousers</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Jeans'  %}">Jeans</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Innerwear'  %}">Innerwear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sportswear'  %}">Sportswear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sleep_&_lounge_Wear'  %}">Sleep& lounge Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Ethnic_Wear'  %}">Ethnic Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Ties,Socks_&_Belt'  %}">Ties,Socks & Belt</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Suits_&_Blazers'  %}">Suits & Blazers</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sweaters'  %}">Sweaters</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Jackets_&_Coats'  %}">Jackets & Coats</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">FOOTWEAR</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li> <a href="{% url 'shop' 'Men' 'Fashion_Sandals'  %}">Fashion Sandals</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Slippers'  %}">Slippers</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Shoes'  %}">Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Boots'  %}">Boots</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sports_Shoes'  %}">Sports Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Flip-Flops'  %}">Flip-Flops</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Flats'  %}">Flats</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Formal_Shoes'  %}">Formal Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sports_Shoes'  %}">Sports Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Formal_Shoes'  %}">Formal Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Casual_Shoes'  %}">Casual Shoes</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sneakers'  %}">Sneakers</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Loafers_&_Mocassins'  %}">Loafers & Mocassins </a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Sandals_&_Floaters'  %}">Sandals & Floaters</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">ACCESSORIES</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li> <a href="{% url 'shop' 'Men' 'Sunglasses'  %}">Sunglasses</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Frames'  %}">Frames</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Watches'  %}">Watches</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Jewellery'  %}">Jewellery</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Handbags_&_Clutches'  %}">Handbags & Clutches</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Makeup_Kit'  %}">Makeup Kit</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Bracelets'  %}">Bracelets</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Pocket_Square'  %}">Pocket Square</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Rings'  %}">Rings</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Men' 'Wallets'  %}">Wallets</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="navTab2">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li> <a href="{% url 'shop' 'Women' 'Western_Wear'  %}">Western Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Shirts,_Tops,&_Tees'  %}">Shirts, Tops,& Tees</a>
+                                        </li>
+
+                                        <li> <a href="{% url 'shop' 'Women' 'Dress'  %}">Dress</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Jeans_&_Jeggings'  %}">Jeans & Jeggings</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Ethnic_Wear'  %}">Ethnic Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Salwar_Suits'  %}">Salwar Suits</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Sarees'  %}">Sarees</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Lingerie_&_Lounge_Wear'  %}">Lingerie & Lounge Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Sportswear'  %}">Sportswear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Socks'  %}">Socks</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Sweaters'  %}">Sweaters</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Women' 'Jacket&Coats'  %}">Jacket&Coats</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Men's Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Women' 'T-Shits' %}">T-Shits</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Shirts' %}">Shirts</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Trousers' %}">Trousers</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Jeans' %}">Jeans</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Innerwear' %}">Innerwear</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sportswear' %}">Sportswear</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sleep_&_lounge_Wear' %}">Sleep & lounge Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Ethnic_Wear' %}">Ethnic Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Ties,Socks_&_Belt' %}">Ties,Socks & Belt</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Suits_&_Blazers' %}">Suits & Blazers</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sweaters' %}">Sweaters</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Jackets_&_Coats' %}">Jackets & Coats</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">FOOTWEAR</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Women' 'Fashion_Sandals' %}">Fashion Sandals</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Slippers' %}">Slippers</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Shoes' %}">Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Boots' %}">Boots</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sports_Shoes' %}">Sports Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Flip-Flops' %}">Flip-Flops</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Flats' %}">Flats</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Formal_Shoes' %}">Formal Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sports_Shoes' %}">Sports Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Casual_Shoes' %}">Casual Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sneakers' %}">Sneakers</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Loafers_&_Mocassins' %}">Loafers & Mocassins </a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Sandal_ &_Floaters' %}">Sandals & Floaters</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">ACCESSORIES</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Women' 'Sunglasses' %}">Sunglasses</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Frames' %}">Frames</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Watches' %}">Watches</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Jewellery' %}">Jewellery</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Handbags_&_Clutches' %}">Handbags & Clutches</a><</li>
+                                        <li><a href="{% url 'shop' 'Women' 'Makeup_Kit' %}">Makeup Kit</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Bracelets' %}">Bracelets </a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Pocket_Square' %}">Pocket Square</a></li>
+                                        <li><a href="{% url 'shop' 'Women' 'Rings' %}">Rings</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                  </div>
+                                <div class="tab-pane fade" id="navTab3">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li> <a href="{% url 'shop' 'Kids' 'Western_Wear'  %}">Western Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Shirts,_Tops,&_Tees'  %}">Shirts, Tops,& Tees</a>
+                                        </li>
+
+                                        <li> <a href="{% url 'shop' 'Kids' 'Dress'  %}">Dress</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Jeans_&_Jeggings'  %}">Jeans & Jeggings</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Ethnic_Wear'  %}">Ethnic Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Salwar_Suits'  %}">Salwar Suits</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Sarees'  %}">Sarees</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Lingerie_&_Lounge Wear'  %}">Lingerie & Lounge Wear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Sportswear'  %}">Sportswear</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Socks'  %}">Socks</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Sweaters'  %}">Sweaters</a>
+                                        </li>
+                                        <li> <a href="{% url 'shop' 'Kids' 'Jacket_&_Coats'  %}">Jacket & Coats</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Men's Clothing</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Kids' 'T-Shits' %}">T-Shits</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Shirts' %}">Shirts</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Trousers' %}">Trousers</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Jeans' %}">Jeans</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Innerwear' %}">Innerwear</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sportswear' %}">Sportswear</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sleep_&_lounge_Wear' %}">Sleep & lounge Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Ethnic_Wear' %}">Ethnic Wear</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Ties,Socks_&_Belt' %}">Ties,Socks & Belt</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Suits_&_Blazers' %}">Suits & Blazers</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sweaters' %}">Sweaters</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Jackets_&_Coats' %}">Jackets & Coats</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">FOOTWEAR</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Kids' 'Fashion Sandals' %}">Fashion Sandals</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Slippers' %}">Slippers</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Shoes' %}">Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Boots' %}">Boots</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sports_Shoes' %}">Sports Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Flip-Flops' %}">Flip-Flops</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Flats' %}">Flats</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Formal_Shoes' %}">Formal Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sports_Shoes' %}">Sports Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Casual_Shoes' %}">Casual Shoes</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sneakers' %}">Sneakers</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Loafers_&_Mocassins' %}">Loafers & Mocassins </a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Sandals_&_Floaters' %}">Sandals & Floaters</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">ACCESSORIES</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'Kids' 'Sunglasses' %}">Sunglasses</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Frames' %}">Frames</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Watches' %}">Watches</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Jewellery' %}">Jewellery</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Handbags & Clutches' %}">Handbags & Clutches</a><</li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Makeup Kit' %}">Makeup Kit</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Bracelets' %}">Bracelets </a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Pocket_Square' %}">Pocket Square</a></li>
+                                        <li><a href="{% url 'shop' 'Kids' 'Rings' %}">Rings</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                  </div>
+                                <div class="tab-pane fade" id="navTab4">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Cookware' %}">Cookware</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Frying Pans' %}">Frying Pans</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Tawas' %}">Tawas</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Kadhais_&_Woks' %}">Kadhais & Woks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Tadka Pans' %}">Tadka Pans</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Pressure_Cookers' %}">Pressure Cookers</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Kitchen Storage & Containers</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Water_Bottles_&_Flasks' %}">Water Bottles & Flasks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Jars_&_Containers' %}">Jars & Containers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Lunch_Boxes' %}">Lunch Boxes</a></li>
+                                      </ul>
+                                    <div class="mb-3 font-weight-bold">Kitchen Tools</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Choppers_&_Chippers' %}">Choppers & Chippers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Graters_&_Slicers' %}">Graters & Slicers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Knives' %}">Knives</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Baking_Tools' %}">Baking Tools</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Dinner Sets</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Opalware & Glass' %}">Opalware & Glass</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Melamine' %}">Melamine</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bone China & Porcelain' %}">Bone China & Porcelain</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Metalware' %}">Metalware</a></li>
+                                      </ul>
+                                      <div class="mb-3 font-weight-bold">Serveware</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Casseroles' %}">Casseroles</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Glassware_&_Drinkware' %}">Glassware & Drinkware</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cutlery' %}">Cutlery</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cups_&_Mugs' %}">Cups & Mugs</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Bakeware</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Cake_&_Muffin_Moulds' %}">Cake & Muffin Moulds</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mixing_Bowls' %}">Mixing Bowls</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cookie_Cutters' %}">Cookie Cutters</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Decorative_Tools' %}">Decorative Tools</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                                  </div>
+                                <div class="tab-pane fade" id="navTab5">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Bedroom Linen</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Bedsheets' %}">Bedsheets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bed_Pillows' %}">Bed Pillows</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Speciality_Pillows' %}">Speciality Pillows</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Blankets_&_Quilts' %}">Blankets & Quilts</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mattress_Protectors' %}">Mattress Protectors</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bedding_Sets' %}">Bedding Sets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Duvet_Covers' %}">Duvet Covers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Fitted_Bedsheets' %}">Fitted Bedsheets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Pillow_Cases' %}">Pillow Cases</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cushion_Covers' %}">Cushion Covers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cushions' %}">Cushions</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Slipcovers' %}">Slipcovers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Diwan_Sets' %}">Diwan Sets</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Bathroom Linen</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Bath_Mats' %}">Bath Mats</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bath_Pillows' %}">Bath Pillows</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bathrobes' %}">Bathrobes</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Shower_Curtains' %}">Shower Curtains</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bath_Towels' %}">Bath Towels</a></li>
+                                      </ul>
+                                      <div class="mb-3 font-weight-bold">Curtains & Accessories</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Curtains' %}">Curtains</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Blinds' %}">Blinds</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Valances' %}">Valances</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Tiers' %}">Tiers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Swags' %}">Swags</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Accessories' %}">Accessories</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Carpets & Rugs</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Carpets' %}">Carpets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Rugs' %}">Rugs</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Doormats' %}">Doormats</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Stair_Carpets' %}">Stair Carpets</a></li>
+                                      </ul>
+                                      <div class="mb-3 font-weight-bold">Kitchen Linen</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                       <li><a href="{% url 'shop' 'None' 'Aprons' %}">Aprons</a></li>
+                                      <li><a href="{% url 'shop' 'None' 'Place_Mats' %}">Place Mats</a></li>
+                                      <li><a href="{% url 'shop' 'None' 'Table_Cloths' %}">Table Cloths</a></li>
+                                      <li><a href="{% url 'shop' 'None' 'Table_Runners' %}">Table Runners</a></li>
+                                      <li><a href="{% url 'shop' 'None' 'Oven_Gloves' %}">Oven Gloves</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="navTab6">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Wall Decor</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Clocks' %}">Clocks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Stickers' %}">Stickers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mirros' %}">Mirros</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Wall_Décor_&_Hanging' %}">Wall Décor & Hanging</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Table Accents</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Desk_Clocks' %}">Desk Clocks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Candle Holders' %}">Candle Holders</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Candles' %}">Candles</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Diyas_&_Lanterns' %}">Diyas & Lanterns</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Vases' %}">Vases</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Ashtrays' %}">Ashtrays</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Decorative_Plates' %}">Decorative Plates</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Home Decor Accents</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Idols_&_Figurines' %}">Idols & Figurines</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Wind_Chimes_&_Dream_Catchers' %}">Wind Chimes & Dream Catchers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Fridge_Magnets' %}">Fridge Magnets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Fragrance' %}">Fragrance</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="navTab7">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Cleaning Supplies</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Mops' %}">Mops</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Brooms' %}">Brooms</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Scrubs_&_Sponges' %}">Scrubs & Sponges</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Toilet_Brushes' %}">Toilet Brushes</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cleaning_Gloves' %}">Cleaning Gloves</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bathroom_Hardware' %}">Bathroom Hardware</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Power & Hand Tools</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Power_Tools' %}">Power Tools</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Hand Tools' %}">Hand Tools</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Drills' %}">Drills</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Tool_Kits' %}">Tool Kits</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Screwdrivers' %}">Screwdrivers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Measuring_&_Layout_Tools' %}">Measuring & Layout Tools</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Glue_Guns' %}">Glue Guns</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Spanners_&_Wrenches' %}">Spanners & Wrenches</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Door Locks & Hardware</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                        <li><a href="{% url 'shop' 'None' 'Ladders' %}">Ladders</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Hooks' %}">Hooks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Door_Hardware' %}">Door Hardware</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Furniture_Hardware' %}">Furniture Hardware</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Cabinet_Hardware' %}">Cabinet Hardware</a></li>
+                                      </ul>
+                                      <div class="mb-3 font-weight-bold">Electronics</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-0">
+                                          <li><a href="{% url 'shop' 'None' 'Extension_Cords' %}">Extension Cords</a></li>
+                                          <li><a href="{% url 'shop' 'None' 'Switchers_&_Dimmers' %}">Switchers & Dimmers</a></li>
+                                          <li><a href="{% url 'shop' 'None' 'Door_Chimes_&_Bells' %}">Door Chimes & Bells</a></li>
+                                          <li><a href="{% url 'shop' 'None' 'Cables' %}">Cables</a></li>
+                                          <li><a href="{% url 'shop' 'None' 'Electrical_Wire' %}">Electrical Wire</a></li>
+                                          <li><a href="{% url 'shop' 'None' 'Tools_&_Testers' %}">Tools & Testers</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane" id="navTab8">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Mobile_Cases' %}">Mobile Cases</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Headphones_&_Headsets' %}">Headphones & Headsets</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Power_Banks' %}">Power Banks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'SCreenguards' %}">SCreenguards</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Memory_Cards' %}">Memory Cards</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Smart_Headphones' %}">Smart Headphones</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mobile_Cables' %}">Mobile Cables</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mobile_Chargers' %}">Mobile Chargers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Mobile_Holders' %}">Mobile Holders</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="navTab9">
+                                  <div class="row">
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Gardening & Outdoor</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Gardening_Accessories' %}">Gardening Accessories</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Live_Plants' %}">Live Plants</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Pots_&_Planters' %}">Pots & Planters</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Watering_Equipment' %}">Watering Equipment</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Manual_Gardening_Tools' %}">Manual Gardening Tools</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Solar_Lamps_&_Lanterns' %}">Solar Lamps & Lanterns</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Outdoor_Décor' %}">Outdoor Décor</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Decorative_Pots' %}">Decorative Pots</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Sculptures' %}">Sculptures</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Outdoor_Candles' %}">Outdoor Candles</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Wind_Chimes' %}">Wind Chimes</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Barbeque_&_Outdoor Cooking' %}">Barbeque & Outdoor Cooking</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Barbeque_Grills' %}">Barbeque Grills</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Gloves_Mitts' %}">Gloves/Mitts</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Thermometers' %}">Thermometers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Picnic_Baskets' %}">Picnic Baskets</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-12 col-md-3 col-sm-6">
+                                      <!-- Heading -->
+                                      <div class="mb-3 font-weight-bold">Storage & Organisation</div>
+                                      <!-- Links -->
+                                      <ul class="list-unstyled mb-6 mb-md-0">
+                                        <li><a href="{% url 'shop' 'None' 'Boxes,_Baskets_&_Bins' %}">Boxes, Baskets & Bins</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Storage_Boxes_&_Chests' %}">Storage Boxes & Chests</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Paper_Bins' %}">Paper Bins</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Closet_Organisation' %}">Closet Organisation</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Clothes_Covers' %}">Clothes Covers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Clothes_Hangers' %}">Clothes Hangers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Tie_Racks' %}">Tie Racks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Belt_Racks' %}">Belt Racks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Laundry_Organisation' %}">Laundry Organisation</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Drying_Racks' %}">Drying Racks</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Ironing_Boards' %}">Ironing Boards</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Laundry_Bags' %}">Laundry Bags</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Laundry_Bins' %}">Laundry Bins</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Ironing_Accessories' %}">Ironing Accessories</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Wall_Hooks_&_Key_Holders' %}">Wall Hooks & Key Holders</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Shoe_Organisation' %}">Shoe Organisation</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Shoe_Boxes' %}">Shoe Boxes</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bathroom_Accessories_&_Organisation' %}">Bathroom Accessories & Organisation</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Bathroom_Soap_Dispensers' %}">Bathroom Soap Dispensers</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Shower_Curtains' %}">Shower Curtains</a></li>
+                                        <li><a href="{% url 'shop' 'None' 'Toothbrush_Holders' %}">Toothbrush Holders</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'privacy_Policy' %}">Privacy Policy</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'aboutUs' %}">About</a>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-nav align-items-center d-flex justify-content-end">
+              <div>
+                <a class="d-flex align-items-center" href="#" id="header-cart-btn" data-toggle="modal" data-target="#cartModal"> <span class="bg-white px-2 py-1 shadow-sm rounded" data-cart-items="{{ cart.Total_Item }}">
+                  <i class="las la-shopping-cart"></i>
+                </span>
+                  <div class="ml-4 d-none d-md-block"> <small class="d-block text-muted">My Cart</small>
+                    <span class="text-dark">{{ cart.Total_Item }} Items - ₹{{ cart.Total_Price }}</span>
+                  </div>
+                </a>
+              </div>
+               <div>
+
+                <a class="d-flex align-items-center" href="{% url 'logout_user' %}"> <span class="bg-white px-2 py-1 shadow-sm rounded">
+                  <i class="las la-sign-out-alt"></i>
+                </span>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!--menu end-->
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!--header end-->
+
+<!--hero section start-->
+
+<section class="bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="h2 mb-0">Order Completed</h1>
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-md-end bg-transparent p-0 m-0">
+            <li class="breadcrumb-item"><a class="text-dark" href="{% url 'index' %}"><i class="las la-home mr-1"></i>Home</a>
+            </li>
+
+            <li class="breadcrumb-item active text-primary" aria-current="page">Order Completed</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- / .row -->
+  </div>
+  <!-- / .container -->
+</section>
+
+<!--hero section end--> 
+
+
+<!--body content start-->
+
+<div class="page-content">
+
+<section class="text-center pb-11">
+  <img src="{% static 'apkshopee/images/success.png' %}" alt="Successfully" height="190px" width="160px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mb-4">Thank you for shopping. Your order has been placed.</h3>
+        
+        <a class="btn btn-dark btn-animated" href="{% url 'index' %}"><i class="las la-shopping-cart mr-1"></i>Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!--body content end--> 
+
+
+
+<!--footer start-->
+
+<footer class="py-11 bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-3"> <a class="footer-logo text-white h2 mb-0" href="{% url 'index' %}">
+              APK<span class="text-primary">Shopee</span>
+            </a>
+        <p class="my-3 text-muted">APK SHOPEE - APk Shopee is a platform providing various options for shopping to you from the comfort of your home.We provide a huge variety for almost every product to enable comfortable. Shopping and giving you vast options to choose from.</p>
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a class="text-light ic-2x" href="https://m.facebook.com/apkperksofficial"target="_blank"><i class="la la-facebook"></i></a>
+          </li>
+
+          <li class="list-inline-item"><a class="text-light ic-2x" href="https://www.instagram.com/apkperks/"target="_blank"><i class="la la-instagram"></i></a>
+          </li>
+          <li class="list-inline-item"><a class="text-light ic-2x" href="#"><i class="la la-youtube"></i></a>
+          </li>
+          <li class="list-inline-item"><a class="text-light ic-2x" href="https://in.linkedin.com/company/apk-perks"target="_blank"><i class="la la-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-6 mt-6 mt-lg-0">
+        <div class="row">
+          <div class="col-12 col-sm-4 navbar-dark">
+            <h5 class="mb-4 text-white">Quick Links</h5>
+            <ul class="navbar-nav list-unstyled mb-0">
+               <li class="mb-3 nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="{% url 'aboutUs' %}">About</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="{% url 'faq' %}">Faq</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 mt-6 mt-sm-0 navbar-dark">
+            <h5 class="mb-4 text-white">Top Products</h5>
+            <ul class="navbar-nav list-unstyled mb-0">
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">T-Shirts</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">Sneakers & Athletic</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">Shirts & Tops</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">Sunglasses</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">Bags & Wallets</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="#">Accessories</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Shoes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 mt-6 mt-sm-0 navbar-dark">
+            <h5 class="mb-4 text-white">Features</h5>
+            <ul class="navbar-nav list-unstyled mb-0">
+              <li class="mb-3 nav-item"><a class="nav-link" href="{% url 'TermsandCondition' %}">Term Of Service</a>
+              </li>
+              <li class="mb-3 nav-item"><a class="nav-link" href="{% url 'privacy_Policy' %}">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 mt-6 mt-lg-0">
+        <div class="d-flex mb-3">
+          <div class="mr-2"> <i class="las la-map ic-2x text-primary"></i>
+          </div>
+          <div>
+            <h6 class="mb-1 text-light">Office address</h6>
+            <p class="mb-0 text-muted">3rd floor, H-141 Sector-63, Noida-201301</p>
+          </div>
+        </div>
+        <div class="d-flex mb-3">
+          <div class="mr-2"> <i class="las la-envelope ic-2x text-primary"></i>
+          </div>
+          <div>
+            <h6 class="mb-1 text-light">Email Us</h6>
+            <a class="text-muted" href="mailto:apkshopee@gmail.com">apkshopee@gmail.com</a>
+          </div>
+        </div>
+        <div class="d-flex mb-3">
+          <div class="mr-2"> <i class="las la-mobile ic-2x text-primary"></i>
+          </div>
+          <div>
+            <h6 class="mb-1 text-light">Phone Number</h6>
+            <a class="text-muted" href="tel:0120-4369999">0120-4369999</a>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="mr-2"> <i class="las la-clock ic-2x text-primary"></i>
+          </div>
+          <div>
+            <h6 class="mb-1 text-light">Working Hours</h6>
+            <span class="text-muted">Mon - Sat: 10AM - 6PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-8">
+    <div class="row text-muted align-items-center">
+      <div class="col-md-7">Copyright ©2021 APK Shopee.All rights reserved.
+      </div>
+      <div class="col-md-5 text-md-right mt-3 mt-md-0">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item">
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--footer end-->
+  <div class="ml8">
+  <span class="letters-container">
+    <span class="letters letters-left">Wallet</span>
+    <span class="letters bang">₹{{ wallet }}</span>
+  </span>
+  <span class="circle circle-white"></span>
+  <span class="circle circle-dark"></span>
+  <span class="circle circle-container"><span class="circle circle-dark-dashed"></span></span>
+</div>
+
+
+</div>
+
+<!-- page wrapper end -->
+
+<!-- Cart Modal -->
+<div class="modal fade cart-modal" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Your Cart ({{ cart.Total_Item }})</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {% for i in carts %}
+        <div>
+          <div class="row align-items-center">
+            <div class="col-5 d-flex align-items-center">
+              <div class="mr-4">
+                <form method="post" action="{% url 'TermsandCondition' %}">
+                  {% csrf_token %}
+                  <input type="hidden" name="sno" value="{{ i.sno }}">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="las la-times"></i>
+                </button>
+                </form>
+              </div>
+              <!-- Image -->
+              <a>
+                <img class="img-fluid" src="{{MEDIA_URL}}{{i.Image.url}}" alt="...">
+              </a>
+            </div>
+            <div class="col-7">
+              <!-- Title -->
+              <h6><a class="link-title">{{ i.Product_Name }}</a></h6>
+              <div class="product-meta"><span class="mr-2 text-primary">₹{{ i.Price }}</span><span class="text-muted">x {{ i.Qty }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endfor %}
+        <hr class="my-5">
+        <div class="d-flex justify-content-between align-items-center mb-8"> <span class="text-muted">Subtotal:</span>  <span class="text-dark">₹{{ cart.Total_Price }}</span>
+        </div> <a href="{% url 'Cart' %}" class="btn btn-primary btn-animated mr-2"><i class="las la-shopping-cart mr-1"></i>View Cart</a>
+        <a href="{% url 'Checkout' %}" class="btn btn-dark"><i class="las la-money-check mr-1"></i>Continue To Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="modal fade view-modal" id="quick-view" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0 pb-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row align-items-center">
+          <div class="col-lg-5 col-12">
+            <img class="img-fluid rounded" src="{% static 'apkshopee/images/product/large/01.jpg' %}" alt="" />
+          </div>
+          <div class="col-lg-7 col-12 mt-5 mt-lg-0">
+            <div class="product-details">
+              <h3 class="mb-0">Women Sweater</h3>
+              <div class="star-rating mb-4"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+              </div> <span class="product-price h4">$25.00 <del class="text-muted h6">$35.00</del></span>
+              <ul class="list-unstyled my-4">
+                <li class="mb-2">Availibility: <span class="text-muted"> In Stock</span> 
+                </li>
+                <li>Categories :<span class="text-muted"> Women's</span>
+                </li>
+              </ul>
+              <p class="mb-4">Nulla eget sem vitae eros pharetra viverra Nam vitae luctus ligula suscipit risus nec eleifend Pellentesque eu quam sem, ac malesuada</p>
+              <div class="d-sm-flex align-items-center mb-5">
+                <div class="d-flex align-items-center mr-sm-4">
+                  <button class="btn-product btn-product-up"> <i class="las la-minus"></i>
+                  </button>
+                  <input class="form-product" type="number" name="form-product" value="1">
+                  <button class="btn-product btn-product-down"> <i class="las la-plus"></i>
+                  </button>
+                </div>
+                <select class="custom-select mt-3 mt-sm-0" id="inputGroupSelect01">
+                  <option selected>Size</option>
+                  <option value="1">XS</option>
+                  <option value="2">S</option>
+                  <option value="3">M</option>
+                  <option value="3">L</option>
+                  <option value="3">XL</option>
+                  <option value="3">XXL</option>
+                </select>
+                <div class="d-flex text-center ml-sm-4 mt-3 mt-sm-0">
+                  <div class="form-check pl-0 mr-3">
+                    <input type="radio" class="form-check-input" id="color-filter01" name="Radios">
+                    <label class="form-check-label" for="color-filter01" data-bg-color="#3cb371"></label>
+                  </div>
+                  <div class="form-check pl-0 mr-3">
+                    <input type="radio" class="form-check-input" id="color-filter02" name="Radios" checked>
+                    <label class="form-check-label" for="color-filter02" data-bg-color="#4876ff"></label>
+                  </div>
+                  <div class="form-check pl-0 mr-3">
+                    <input type="radio" class="form-check-input" id="color-filter03" name="Radios">
+                    <label class="form-check-label" for="color-filter03" data-bg-color="#0a1b2b"></label>
+                  </div>
+                  <div class="form-check pl-0">
+                    <input type="radio" class="form-check-input" id="color-filter04" name="Radios">
+                    <label class="form-check-label" for="color-filter04" data-bg-color="#f94f15"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-sm-flex align-items-center mt-5">
+                <button class="btn btn-primary btn-animated mr-sm-4 mb-3 mb-sm-0"><i class="las la-shopping-cart mr-1"></i>Add To Cart</button>
+                <a class="btn btn-animated btn-dark" href="#"> <i class="lar la-heart mr-1"></i>Add To Wishlist</a>
+              </div>
+              <div class="d-sm-flex align-items-center border-top pt-4 mt-5">
+                <h6 class="mb-sm-0 mr-sm-4">Share It:</h6>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a class="bg-white shadow-sm rounded p-2" href="https://m.facebook.com/apkperksofficial"target="_blank"><i class="la la-facebook"></i></a>
+                  </li>
+
+                  <li class="list-inline-item"><a class="bg-white shadow-sm rounded p-2" href="https://www.instagram.com/apkperks/"target="_blank"><i class="la la-instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a class="bg-white shadow-sm rounded p-2" href="#"><i class="la la-youtube"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a class="bg-white shadow-sm rounded p-2" href="https://in.linkedin.com/company/apk-perks"target="_blank"><i class="la la-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+<!--back-to-top start-->
+
+<div class="scroll-top"><a class="smoothscroll" href="#top"><i class="las la-angle-up"></i></a></div>
+
+<!--back-to-top end-->
+
+<!-- inject js start -->
+
+<script src="{% static 'apkshopee/js/theme-plugin.js' %}"></script>
+<script src="{% static 'apkshopee/js/theme-script.js' %}"></script>
+
+<!-- inject js end -->
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn daemon for Django
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/ZEEFLEET-Phase2-website-django-metronic
+ExecStart=/home/ubuntu/ZEEFLEET-Phase2-website-django-metronic/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/ZEEFLEET-Phase2-website-django-metronic/gunicorn.sock zeefleet_frontend.wsgi:application
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

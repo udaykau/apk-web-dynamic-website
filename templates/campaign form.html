@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'register/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'register/css/style3.css' %}">
+</head>
+<body>
+
+			<!-- Messages ---------->
+{% for message in messages %}
+            <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <b>Error! </b>{{ message }}
+</div>
+{% endfor %}
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action="{% url 'register' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            Logo: <br>
+                                    <input class="input-file" type="file" name="logo" required>
+                                </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="campaign_name" placeholder="campaign_name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-input" name="validity" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="phone" id="phone" placeholder="Phone No." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="address" id="address" placeholder="Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="Pin Code" id="Pin Code" placeholder="Pin Code" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                        </div>
+                        <div class="form-group">
+                            PAN Card: <br>
+                                    <input class="input-file" type="file" name="pan_card" required>
+                                </div>
+
+                        <div class="form-group">
+                            Aadhar Card:<br>
+                                    <input class="input-file" type="file" name="aadhar_card" required>
+                                </div>
+
+                        <div class="form-group">
+                            Cancelled Cheque:<br>
+                                    <input class="input-file" type="file" name="cheque" required>
+                                </div>
+
+
+                        <div class="form-group">
+                            Photo:<br>
+                                    <input class="input-file" type="file" name="photo" required>
+                                </div>
+
+
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required>
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up">
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="{% url 'Login' %}" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'register/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

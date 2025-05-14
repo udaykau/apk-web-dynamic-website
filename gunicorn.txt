@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve Django Zeefleet
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/ZEEFLEET-Phase2-website-django-metronic
+ExecStart=/home/ubuntu/ZEEFLEET-Phase2-website-django-metronic/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8000 zeefleet_frontend.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+
+

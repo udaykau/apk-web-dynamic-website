@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.644); height: 140px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="color: white" class="ml-md-5 mt-md-5"><strong>ReviseAdvice | Movie Recommendation
+                        System</strong></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(241, 233, 233);">
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <h3 style="color: rgb(128, 128, 128);">Register</h3>
+            </div>
+            <div class="col-md-12">
+                <div class="marketing-page">
+
+                    <div class="marketing-container">
+                        <ui-view>
+                            <!---->
+                            <register-page>
+                                <div class="register-page">
+                                    <register-form _nghost-c4="">
+                                        <div _ngcontent-c4="" class="register-form">
+                                            <form _ngcontent-c4="" novalidate=""
+                                                class="ng-untouched ng-pristine ng-invalid">
+                                                <div _ngcontent-c4="" class="row">
+                                                    <div _ngcontent-c4="" class="col-md-6">
+                                                        <div _ngcontent-c4="" class="form-group">
+                                                            <label _ngcontent-c4=""> email
+                                                                <!---->
+                                                                <!---->
+                                                                <!----><input _ngcontent-c4="" autofocus=""
+                                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                    formcontrolname="email" required="" type="email">
+                                                            </label>
+                                                        </div>
+                                                        <div _ngcontent-c4="" class="form-group"><label
+                                                                _ngcontent-c4=""> password
+                                                                <input _ngcontent-c4=""
+                                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                    formcontrolname="inputPass1" maxlength="50"
+                                                                    minlength="6" required="" type="password">
+                                                            </label>
+                                                        </div>
+                                                        <form>
+                                                            <div class="multiselect">
+                                                              <div class="selectBox" onclick="showCheckboxes()">
+                                                                Genre
+                                                                <select>
+                                                                  <option>Select an option</option>
+                                                                </select>
+                                                                <div class="overSelect"></div>
+                                                              </div>
+                                                              <div id="checkboxes">
+                                                                <label   _ngcontent-c4="">
+                                                                  <input type="checkbox" id="one" />Hindi</label>
+                                                                <label for="two">
+                                                                  <input type="checkbox" id="two" />English</label>
+                                                                <label for="three">
+                                                                  <input type="checkbox" id="three" />Spanish</label>
+                                                                  <label for="four">
+                                                                    <input type="checkbox" id="three" />French</label>
+                                                                    <label for="five">
+                                                                        <input type="checkbox" id="three" />Japanese</label>
+                                                              </div>
+                                                            </div>
+                                                          </form>
+                                                          <div _ngcontent-c4="" class="form-group mt-4"><label
+                                                            _ngcontent-c4=""> Mobile Number
+                                                            <input _ngcontent-c4=""
+                                                                class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                formcontrolname="inputPass2" type="text"
+                                                                name="Phone Number" pattern="[7-9]{1}[0-9]{9}"
+                                                                title="Phone number with 7-9 and remaing 9 digit with 0-9">
+                                                        </label>
+                                                    </div>
+                                                          
+                                                    </div>
+                                                    <div _ngcontent-c4="" class="col-md-6">
+                                                        <div _ngcontent-c4="" class="form-group">
+                                                            <label _ngcontent-c4=""> username
+                                                                <input _ngcontent-c4=""
+                                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                    formcontrolname="username" maxlength="30"
+                                                                    minlength="3" required="" type="text">
+                                                            </label>
+                                                        </div>
+                                                        <div _ngcontent-c4="" class="form-group"><label
+                                                                _ngcontent-c4=""> retype password
+                                                                <input _ngcontent-c4=""
+                                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                    formcontrolname="inputPass2" required=""
+                                                                    type="password">
+                                                            </label>
+                                                        </div>
+                                                       <form action="">
+                                                           <div class="selectpicker">
+                                                               language
+                                                               <select>
+                                                                   <option >Hindi</option>
+                                                                   <option >English</option>
+                                                               </select>
+                                                           </div>
+                                                       </form>
+                                                    </div>
+                                                </div>
+
+                                                <div _ngcontent-c4="" style="margin-top: 20px;">
+                                                    <label _ngcontent-c4="">
+                                                        <input _ngcontent-c4="" formcontrolname="iAgree" required=""
+                                                            type="checkbox" class="ng-untouched ng-pristine ng-invalid">
+                                                        I agree to the MovieLens <a _ngcontent-c4="" target="_blank"
+                                                            uisref="global.termsOfUse" href="#">Terms
+                                                            of Use</a> and <a _ngcontent-c4="" target="_blank"
+                                                            uisref="global.privacyPolicy" href="#">Privacy Policy</a>.
+                                                        <!---->
+                                                    </label>
+                                                </div>
+                                                <div _ngcontent-c4="" class="form-group" style="margin-top: 15px;">
+                                                    <!---->
+                                                    <button _ngcontent-c4="" class="btn btn-default"
+                                                        type="submit">register</button><span _ngcontent-c4=""
+                                                        style="margin-left: 5px;" hidden="">
+                                                        <i _ngcontent-c4="" class="fa fa-cog fa-spin">
+
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </register-form>
+                                    <p class="spaced"><a uisref="auth.login" href="#">already a user? sign in here.</a>
+                                    </p>
+                                </div>
+                            </register-page>
+                        </ui-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="java script/sign.js"></script>
+</body>
+
+</html>

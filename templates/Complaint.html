@@ -1,0 +1,267 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>APKWEB - Complaint</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/bootstrap.min.css' %}">
+    <!-- Font Awesome & Pixeden Icon Stroke icon font-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <!-- Google fonts - Roboto Condensed & Roboto-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- lightbox-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/lightbox.min.css' %}">
+    <!-- Leaflet Maps-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'dashboard/favicon.png' %}">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]-->
+  </head>
+  <body class="undefined">
+    <!-- navbar-->
+<header class="header">
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header"><a href="{% url 'Dashboard' %}" class="navbar-brand">
+            <img src="{% static 'dashboard/logo.png' %}" alt="APKWEB" height="38px" width="105px"></a>
+            <div class="navbar-buttons">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="fa fa-align-justify"></i></button>
+            </div>
+          </div>
+          <div id="navigation" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'Dashboard' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About us</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'insurance' %}">Insurance</a></li>
+                  <li><a href="{% url 'mobileperks' %}">Mobile Perks</a></li>
+                  <li><a href="{% url 'kisan_shakti_kendra' %}">Kisan Shakti Kendra</a></li>
+                  <li><a href="{% url 'onlineCampaign' %}">Online Campaigns</a></li>
+                  <li><a href="{% url 'securecare' %}">Secure Care</a></li>
+                  <li><a href="{% url 'apkeducation' %}">APK Education</a></li>
+                  <li><a href="https://app.apkperks.com/">APKPERKS CSP</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Reports <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'report' 'Daily_report' %}">Daily Report</a></li>
+                  <li><a href="{% url 'report' 'Weekly_report' %}">Weekly Report</a></li>
+                  <li><a href="{% url 'report' 'Monthly_report' %}">Monthly Report</a></li>
+                  <li><a href="{% url 'report' 'Total_report' %}">Total Report</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'coming_soon' %}">Summary</a></li>
+              <li><a href="{% url 'Contact' %}">Contact us</a></li>
+            </ul>
+            <a href="{% url 'logout_user' %}" class="btn navbar-btn btn-white pull-left"><i class="fa fa-user-circle" aria-hidden="true"></i>Logout</a>
+          <a href="{% url 'Complaint' %}" style="margin-left: 20px;" class="btn navbar-btn btn-white pull-left">Register Complaint</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- *** LOGIN MODAL ***_________________________________________________________
+    -->
+    <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+            <h4 id="Login" class="modal-title">Customer login</h4>
+          </div>
+          <div class="modal-body">
+            <form action="customer-orders.html" method="post">
+              <div class="form-group">
+                <input id="email_modal" type="text" placeholder="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="password_modal" type="password" placeholder="password" class="form-control">
+              </div>
+              <p class="text-center">
+                <button type="button" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+              </p>
+            </form>
+            <p class="text-center text-muted">Not registered yet?</p>
+            <p class="text-center text-muted"><a href="#"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *** LOGIN MODAL END ***-->
+    <section class="background-gray-lightest">
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'Dashboard' %}">Home</a></li>
+            <li>Complaint</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="box-simple">
+              <div class="icon"><i class="fa fa-user-plus" aria-hidden="true"></i></div>
+              <div class="content">
+                <h4>Complaint form</h4>
+                <p class="text-muted">Feel free to write to us.</p>
+                <form action="{% url 'Complaint' %}" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="firstname">Merchant Name</label>
+                        <input id="firstname" type="text" class="form-control" value="{{ user.name }}" name="name" readonly>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="lastname">Unique ID</label>
+                        <input id="lastname" type="text" class="form-control" value="{{ user.sno }}" name="ID" readonly>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" class="form-control" value="{{ user.email }}" name="email" readonly>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="text" class="form-control" value="{{ user.phone }}" name="phone" readonly>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="subject">Complaint Regarding</label>
+                        <select name="subject" id="subject" class="form-control" required>
+                        <option value="-" disabled selected>----</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Campaign">Campaign</option>
+                        <option value="Secure Care">Secure Care</option>
+                        <option value="APK Education">APK Education</option>
+                          <option value="Mobile Perks">Mobile Perks</option>
+                          <option value="Kisan Shakti Kendra">Kisan Shakti Kendra</option>
+                          <option value="Carry 99">Carry 99</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label for="message">Complaint</label>
+                        <textarea id="message" class="form-control" name="complaint" placeholder="Enter Your Complaint Here" rows="5"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br><br>
+        <div id="contact" class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box-simple">
+              <div class="icon"><i class="fa fa-map-pin"></i></div>
+              <div class="content">
+                <h4>Address</h4>
+                <p>APK Web Aggregator<br>3rd Floor, H-141<br> Sector - 63, Noida (IN)<br><strong>201301</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box-simple">
+              <div class="icon"><i class="fa fa-phone-square"></i></div>
+              <div class="content">
+                <h4>Call Support</h4>
+                <p class="text-muted">You can call us on the given contact number during our office hours. All your calls will be answered by our team.</p>
+                <p><strong>(0120)-436-9999</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box-simple">
+              <div class="icon"><i class="fa fa-envelope-square"></i></div>
+              <div class="content">
+                <h4>Mail Support</h4>
+                <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+                <ul>
+                  <li><strong><a href="mailto:apkwebaggregator@gmail.com">apkwebaggregator@gmail.com</a></strong></li>
+                  <li><strong><a href="https://api.whatsapp.com/send?phone=+919319083699&text=Hi,%20I%20would%20like%20to%20get%20more%20information%20for%20APKWEB%20AGGREGATOR..." target="_blank">
+                          +919319083699
+                         - our Whatsapp support platform</a></strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>&copy; 2020 APKWEB AGGREGATOR</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+                <div class="ml8">
+  <span class="letters-container">
+    <span class="letters letters-left">Wallet</span>
+    <span class="letters bang">₹{{ wallet }}</span>
+  </span>
+  <span class="circle circle-white"></span>
+  <span class="circle circle-dark"></span>
+  <span class="circle circle-container"><span class="circle circle-dark-dashed"></span></span>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- button type="button" data-toggle="collapse" data-target="#style-switch" id="style-switch-button" class="btn btn-primary btn-sm hidden-xs hidden-sm"><i class="fa fa-cog fa-2x"></i></button>
+    <div id="style-switch" class="collapse">
+      <h4 class="text-uppercase">Select theme colour</h4>
+      <form class="margin-bottom">
+        <select name="colour" id="colour" class="form-control">
+          <option value="">select colour variant</option>
+          <option value="default">pink</option>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+          <option value="red">red</option>
+          <option value="sea">sea</option>
+          <option value="violet">violet</option>
+        </select>
+      </form>
+      <p><img src="{% static 'dashboard/img/template-mac.png' %}" alt="" class="img-responsive"></p>
+      <p class="text-muted text-small">Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</p>
+    </div -->
+    <!-- JavaScript files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{% static 'dashboard/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'dashboard/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/front.js' %}"></script>
+    <!-- LeafletJS CDN-->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="{% static 'dashboard/js/map.js' %}"></script>
+    <script src="{% static 'dashboard/js/wallet.js' %}"></script>
+  </body>
+</html>

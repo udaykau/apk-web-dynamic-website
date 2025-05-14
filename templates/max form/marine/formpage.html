@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marine Insurance</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="{% static 'form/form.css' %}" >
+        <!--script src="{% static 'form/form.js' %}"></script -->
+        <!-- Bootstrap CSS-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/bootstrap.min.css' %}">
+    <!-- Font Awesome & Pixeden Icon Stroke icon font-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google fonts - Roboto Condensed & Roboto-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400">
+    <!-- lightbox-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/lightbox.min.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'dashboard/favicon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'register/css/style3.css' %}">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9] -->
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body class="home">
+
+			<!-- Messages ---------->
+{% for message in messages %}
+            <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <b>Error! </b>{{ message }}
+</div>
+{% endfor %}
+    <!-- navbar-->
+    <header class="header">
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header"><a href="{% url 'Dashboard' %}" class="navbar-brand">
+            <img src="{% static 'dashboard/logo.png' %}" alt="APKWEB" height="38px" width="105px"></a>
+            <div class="navbar-buttons">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle navbar-btn">Menu<i class="fa fa-align-justify"></i></button>
+            </div>
+          </div>
+          <div id="navigation" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'Dashboard' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About us</a></li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'insurance' %}">Insurance</a></li>
+                  <li><a href="{% url 'mobileperks' %}">Mobile Perks</a></li>
+                  <li><a href="{% url 'kisan_shakti_kendra' %}">Kisan Shakti Kendra</a></li>
+                  <li><a href="{% url 'onlineCampaign' %}">Online Campaigns</a></li>
+                  <li><a href="{% url 'securecare' %}">Secure Care</a></li>
+                  <li><a href="{% url 'apkeducation' %}">APK Education</a></li>
+                  <li><a href="https://app.apkperks.com/">APKPERKS CSP</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Reports <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'report' 'Daily_report' %}">Daily Report</a></li>
+                  <li><a href="{% url 'report' 'Weekly_report' %}">Weekly Report</a></li>
+                  <li><a href="{% url 'report' 'Monthly_report' %}">Monthly Report</a></li>
+                  <li><a href="{% url 'report' 'Total_report' %}">Total Report</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'coming_soon' %}">Summary</a></li>
+              <li><a href="{% url 'Contact' %}">Contact us</a></li>
+            </ul>
+            <a href="{% url 'logout_user' %}" class="btn navbar-btn btn-white pull-left"><i class="fa fa-user-circle" aria-hidden="true"></i>Logout</a>
+          <a href="{% url 'Complaint' %}" style="margin-left: 20px;" class="btn navbar-btn btn-white pull-left">Register Complaint</a>
+          </div>
+        </div>
+      </div>
+    </header>
+            <br><br>
+      <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'Dashboard' %}">Home</a></li>
+            <li><a href="{% url 'insurance' %}">Insurance</a></li>
+            <li>Marine Insurance</li>
+          </ul>
+        </div>
+        <section class="background-gray-lightest">
+      <div class="container clearfix">
+        <div class="row services">
+          <div class="col-md-12">
+            <div class="row">
+                <h2>Benefits of Marine Insurance?</h2>
+              <div class="col-sm-4">
+                <div class="box box-services">
+                    <p><b>Insurance is always beneficial so as is a marine insurance. The benefits of marine insurance are listed below:</b></p>
+                    <ul>
+                        <li>Marine Insurance provides a wide coverage range against the risks of damages or losses faced while at sea.</li>
+                        <li>Most marine insurers provide claim survey assistance everywhere in the world along with claim settlement assistance.</li>
+                        <li>The physical losses along with damages that occurred are also covered.</li>
+                        </ul>
+                  </div>
+              </div>
+                <div class="col-sm-8">
+                    <div class="box box-sercices">
+            <form role="form" method="post" id="reused_form" action="{% url 'Marine_insurance' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>Marine Insurance :</h2>
+                    <p> Please provide your detail below: </p>
+                    <div class="row">
+                            <div class="col-sm-12 form-group">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="mobile"> MOBILE NUMBER :</label>
+                                <input type="text" class="form-control" id="mobile" name="mobile" maxlength="10" required>
+                            </div>
+                        </div>
+                                 <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="companyname"> Organization Name:</label>
+                                <input type="text" class="form-control" id="companyname" name="companyname" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email Address :</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                                   <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+                            </div>
+                        </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                    </form>
+                </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </section>
+                <section class="blog-post">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="post-content margin-bottom--big">
+<h2>Why is Marine Insurance important? </h2>
+  <p>Marine insurance insures us against the losses which we will have to bear in case of any mishap regarding our ships, cargo vessels, or terminals. Marine Insurance provides the coverage against the physical loss or damage caused to the cargo during transit (including the loading and unloading unless the same are specifically covered.)</p>
+                <p>The Marine Policies are defined below:<br>Marine Insurance covers physical losses or damage to the subject matter insured
+    Loss or Damage during transit are covered (Sea/ Rail/Road/Air) </p>
+                <h3>Types of losses in Marine Insurance: </h3>
+                <ul>
+                    <li>Fire</li>
+                    <li>Lightning</li>
+                    <li>Collision with or by the carrying vehicle (Accidental damage to the carrying vehicle)</li>
+                    <li>Overturning of the carrying vehicle</li>
+                    <li>Theft</li>
+                    <li>Pilferage</li>
+                    <li>Non-Delivery</li>
+                    <li>Shortage</li>
+                    <li>Contamination</li>
+                    <li>Leakage</li>
+                    <li>Handling software Damage losses</li>
+                    <li>Loss from water damage</li>
+                    <li>Discharge of cargo at a port of distress</li>
+                    <li>Earthquake, Volcanic eruption, Lightning</li>
+                    <li>General average and salvage charges incurred to avoid any loss from any cause except those excluded</li>
+                    <li>General average sacrifice</li>
+                    <li>Jettison</li>
+                    <li>Washing overboard etc.</li>
+                </ul>
+                <h3>Benefits of Marine Insurance:</h3>
+                <p>Insurance is always beneficial so as is a marine insurance. The benefits of marine insurance are listed below:</p>
+                <ul>
+                    <li>Marine Insurance provides a wide coverage range against the risks of damages or losses faced while at sea.</li>
+                    <li>Most marine insurers provide claim survey assistance everywhere in the world along with claim settlement assistance.</li>
+                    <li>The physical losses along with damages that occurred are also covered.</li>
+                    </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+                </section>
+  <footer class="footer">
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>&copy; 2020 APKWEB AGGREGATOR</p>
+            </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    </body>
+
+</html>
